@@ -15,7 +15,7 @@ case $choice in
             first=$(echo $n | cut -d "," -f 1);
             second=$(echo $n | cut -d "," -f 2);
             echo config firewall address
-            echo  edit '"'$first'"';
+            echo edit '"'$first'"';
             echo set subnet $second;
             echo end
         done < $filename
@@ -37,7 +37,7 @@ case $choice in
                 echo "--IP range of $range between $second and $third too high, skipping--"
             else 
                 echo config firewall address
-                echo edit edit '"'$first'"';
+                echo edit '"'$first'"';
                 echo set type iprange   
                 echo set start-ip $second
                 echo set end-ip $third
